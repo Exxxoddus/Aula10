@@ -1,0 +1,54 @@
+class  Estoque ( var  nome : String , var  qtdAtual : Int , var  qtdMinima : Int ) {
+
+     init {
+         este .qtdAtual =  Math .max ( 0 , este .qtdAtual)
+         este .qtdMinima =  Math .max ( 0 , este .qtdMinima)
+     }
+
+     divertido  mudarNome ( nome : String ) {
+
+         este .nome = nome
+
+     }
+
+    divertido  mudarQtdMinima ( qtdMinima :  Int ) {
+
+        this .qtdMinima = qtdMinima
+
+    }
+
+    divertido  repor ( qtd : Int ) {
+
+        this .qtdAtual + = qtd
+
+    }
+
+    divertido  darBaixa ( qtd : Int ) {
+
+        if (qtd <  0 ) {
+
+            lançar  Exceção ( " Quantidade incorreta " )
+
+        }
+
+        this .qtdAtual - = qtd
+
+    }
+
+    divertido  mostrar () : String {
+
+        return  " Nome: $ { this .nome} | Quantidade Minima: $ { this .qtdMinima} | Quantidade Atual: $ { this .qtdAtual} "
+
+    }
+
+    fun  precisaRepor () : Boolean {
+
+        if ( this .qtdAtual <  this .qtdMinima) {
+            retorno  verdadeiro
+        } else {
+            retornar  falso
+        }
+
+    }
+
+}
